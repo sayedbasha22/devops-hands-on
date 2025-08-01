@@ -37,99 +37,39 @@ ssh -T git@github.com
 Hi sayedbasha22! You've successfully authenticated, but GitHub does not provide shell access.
 
 
-Installing git on linux servers 
-
-Created a VPC and public subnets and created ec2 and installed the git 
-
-
-By default the git installed on ubuntu AMI 
-
-
-Configured the into the ec2 follow the below steps 
-
-Go to GitHub → Settings → SSH and GPG keys
-Click New SSH key
-Title: EC2 Git Key
-Key type: Authentication Key
-Paste the key and save
-and now run this command ssh -T git@github.com
-Hi sayedbasha22! You've successfully authenticated, but GitHub does not provide shell access.
-
-
-
-
-How to create a pull request ?
-
-
-Configure Git on EC2
+## 🔑 Step 4: Git Configuration on EC2
 git config --global user.name "sayedbasha22"
 git config --global user.email "sayedsayedbasha22@gmail.com"
 
-
-Create working directory and clone repo
+## 🔑 Step 5:Repository Setup
 mkdir ~/git
 cd ~/git
 git clone git@github.com:sayedbasha22/practice-repo.git
 cd practice-repo
 
-
-Create a new branch
+## 🔑 Step 6: Git Branch Workflow 
+# Create a new branch
 git checkout -b test-branch
 
-
-Create or modify a file
+# Create or modify a file
 vim test_file
 
-
-Stage and commit the change
-
+# Stage and commit the changes
 git add test_file
 git commit -m "Added test_file in test-branch"
 
-
-Push the branch to GitHub 
+# Push the branch to GitHub
 git push origin test-branch
 
-How to provide access to the other git users for your private repo ?
 
-Go to your repo on GitHub:
- 👉 https://github.com/sayedbasha22/practice-repo
+#  Invite Collaborators to Your Private Repo
+Go to your GitHub repo:
+https://github.com/sayedbasha22/practice-repo
 
+Click Settings → Collaborators or Manage access
 
-Click on Settings (top right of the repo)
+Click Invite a collaborator
 
+Enter the GitHub username or email and click Add
 
-In the left sidebar, click Collaborators (or Manage access)
-
-
-Click “Invite a collaborator”
-
-
-Enter their GitHub username or email and click Add
-
-
-They will get an invite — once they accept, they’ll have access
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+They’ll receive an invite and get access after accepting.
