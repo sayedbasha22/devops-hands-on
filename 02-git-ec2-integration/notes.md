@@ -79,7 +79,6 @@ git checkout -b test-branch
 
 Create or modify a file
 vim test_file
-# (add some content, then :wq to save and quit)
 
 
 Stage and commit the change
