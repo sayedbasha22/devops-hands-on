@@ -51,7 +51,7 @@ cd practice-repo
 # Create a new branch
 git checkout -b test-branch
 
-#### Create or modify a file
+# Create or modify a file
 vim test_file
 
 # Stage and commit the changes
