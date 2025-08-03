@@ -1,75 +1,123 @@
+### 🛠️ Git + GitHub Integration from EC2
 
- 🛠️ Git + GitHub Integration from EC2
-
-This note documents how I set up SSH-based GitHub access from an EC2 instance, generated SSH keys, added them to GitHub, and pushed code directly from EC2.
+This guide documents how to set up SSH-based GitHub access from an EC2 instance, including key generation, adding it to GitHub, configuring Git, and pushing code.
 
 ---
 
-## 🔑 Step 1: Create a ec2 instance 
----> Give file permission for your pem key for logging to the ec2 
-  ex : sudo chmod 400 yourkey.pem 
-----> now ssh to the ec2 (make sure your ec2 security allow the 22 port if your using VPC make sure your route table allowing the igw and also check the correct subnets )
-----> now ssh into the ec2 using ssh command 
-ex : ssh -i /home/ubuntu/yourkey.pem ubuntu@ipaddress 
+🔑 **Step 1: Launch an EC2 Instance**
 
-## 🔑 Step 2: SSH Key Generation on EC2
----> this command generate the ssh keys (private and public keys) after hitting this command you can cd .ssh and check the file content in the .ssh directory and cat the keys 
-`
+* Launch an EC2 instance using Ubuntu in your default VPC.
+* Ensure that port 22 is allowed in the security group.
+* Ensure that your subnet is public and the route table has 0.0.0.0/0 pointing to the internet gateway.
+
+SSH into the instance:
+
+```
+chmod 400 yourkey.pem
+ssh -i /path/to/yourkey.pem ubuntu@<your-ec2-public-ip>
+```
+
+---
+
+🔑 **Step 2: Generate SSH Key on EC2**
+
+```
 ssh-keygen -t ed25519 -C "sayedsayedbashaxxxxx@gmail.com"
- ubuntu@ip: cd .ssh
-ubuntu@ip-:~/.ssh$ ls
-authorized_keys  id_ed25519  id_ed25519.pub
+```
 
-## 🔑 Step 3: Add the public key into the github
-Go to GitHub → Settings → SSH and GPG keys
+* Press Enter for all prompts.
+* This creates two files in `~/.ssh`: `id_ed25519` (private) and `id_ed25519.pub` (public).
 
-Click New SSH key
+Check the keys:
 
-Title: EC2 Git Key
+```
+cd ~/.ssh
+ls
+cat id_ed25519.pub
+```
 
-Key type: Authentication Key
+---
 
-Paste the key and save
+🔑 **Step 3: Add the Public Key to GitHub**
 
-and now run this command 
+* Go to GitHub → Settings → SSH and GPG Keys
+* Click **New SSH key**
+* Title: `EC2 Git Key`
+* Paste your public key (`id_ed25519.pub`)
+* Click **Add SSH key**
+
+Verify the connection:
+
+```
 ssh -T git@github.com
+```
 
+Expected output:
+
+```
 Hi sayedbasha22! You've successfully authenticated, but GitHub does not provide shell access.
+```
 
+---
 
-## 🔑 Step 4: Git Configuration on EC2
+🔑 **Step 4: Configure Git on EC2**
+
+```
 git config --global user.name "sayedbasha22"
 git config --global user.email "sayedsayedbasha22@gmail.com"
+```
 
-## 🔑 Step 5:Repository Setup
+---
+
+🔑 **Step 5: Clone GitHub Repository**
+
+```
 mkdir ~/git
 cd ~/git
 git clone git@github.com:sayedbasha22/practice-repo.git
 cd practice-repo
+```
 
-## 🔑 Step 6: Git Branch Workflow 
-# Create a new branch
+---
+
+🔑 **Step 6: Git Branch Workflow**
+
+Create a new branch:
+
+```
 git checkout -b test-branch
+```
 
-# Create or modify a file
+Create or modify a file:
+
+```
 vim test_file
+```
 
-# Stage and commit the changes
+Stage and commit the changes:
+
+```
 git add test_file
 git commit -m "Added test_file in test-branch"
+```
 
-# Push the branch to GitHub
+Push the branch to GitHub:
+
+```
 git push origin test-branch
+```
 
+---
 
-#  Invite Collaborators to Your Private Repo
-Go to your GitHub repo:
-https://github.com/sayedbasha22/practice-repo
+🔑 **Step 7: Invite Collaborators on GitHub**
 
-Click Settings → Collaborators or Manage access
-
-Click Invite a collaborator
-
-Enter the GitHub username or email and click Add
+* Go to your repo: [https://github.com/sayedbasha22/practice-repo](https://github.com/sayedbasha22/practice-repo)
+* Click **Settings → Collaborators** or **Manage access**
+* Click **Invite a collaborator**
+* Enter their GitHub username or email and click **Add**
 
 They’ll receive an invite and get access after accepting.
+
+---
+
+✅ You’re now fully set up to push code from EC2 to GitHub securely using SSH!
