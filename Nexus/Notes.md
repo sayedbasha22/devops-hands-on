@@ -99,4 +99,6 @@ here you can change the passowrd first get the default password from
 sudo cat /opt/sonatype-work/nexus3/admin.password
 5dc41000-7d82-4a39-b90b-313d7
 
+<img width="1291" height="695" alt="Screenshot from 2025-08-05 17-35-30" src="https://github.com/user-attachments/assets/7175539e-49a5-4b03-88e8-7d76b89476b1" />
+
 
