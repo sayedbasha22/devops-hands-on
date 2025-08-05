@@ -1,3 +1,4 @@
+
 ## What is Nexus 
 Nexus is a central artifact repository used in CI/CD pipelines to store and manage build files like .jar, .war, Docker images, etc.
 - Stores & serves build artifacts
@@ -91,4 +92,11 @@ daemon-reload tells systemd to re-read all service files.
 Start the Nexus service 
 sudo systemctl start nexus
 This runs the command: /opt/nexus/bin/nexus start under the nexus user
+
+Now you can access the nexus in to website 
+http://ip:8081
+here you can change the passowrd first get the default password from 
+sudo cat /opt/sonatype-work/nexus3/admin.password
+5dc41000-7d82-4a39-b90b-313d7
+
 
