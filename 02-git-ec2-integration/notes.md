@@ -2,11 +2,6 @@
 
 This guide documents how to set up SSH-based GitHub access from an EC2 instance, including key generation, adding it to GitHub, configuring Git, and pushing code.
 
----<img width="1268" height="680" alt="image" src="https://github.com/user-attachments/assets/7ec668f0-0a7a-4683-b787-985235866940" />
-
-
-i want to upload image here how can i upload ? i want to see image here 
-
 🔑 **Step 1: Launch an EC2 Instance**
 
 * Launch an EC2 instance using Ubuntu in your default VPC.
