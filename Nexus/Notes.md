@@ -91,7 +91,10 @@ daemon-reload tells systemd to re-read all service files.
 
 Start the Nexus service 
 sudo systemctl start nexus
+<img width="1304" height="346" alt="Screenshot from 2025-08-05 17-30-14" src="https://github.com/user-attachments/assets/ad41864a-8b48-496b-837c-694165966289" />
+
 This runs the command: /opt/nexus/bin/nexus start under the nexus user
+![Uploading Screenshot from 2025-08-05 17-30-14.png…]()
 
 Now you can access the nexus in to website 
 http://ip:8081
@@ -100,5 +103,8 @@ sudo cat /opt/sonatype-work/nexus3/admin.password
 5dc41000-7d82-4a39-b90b-313d7
 
 <img width="1291" height="695" alt="Screenshot from 2025-08-05 17-35-30" src="https://github.com/user-attachments/assets/7175539e-49a5-4b03-88e8-7d76b89476b1" />
+
+Created Multiple Repos 
+<img width="1291" height="695" alt="image" src="https://github.com/user-attachments/assets/812745b2-2a12-4858-8fd7-05a9744ed650" />
 
 
