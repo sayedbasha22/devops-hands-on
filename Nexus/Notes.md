@@ -107,4 +107,6 @@ sudo cat /opt/sonatype-work/nexus3/admin.password
 Created Multiple Repos 
 <img width="1291" height="695" alt="image" src="https://github.com/user-attachments/assets/812745b2-2a12-4858-8fd7-05a9744ed650" />
 
+created a role and given access for repos 
+<img width="1291" height="695" alt="image" src="https://github.com/user-attachments/assets/b636c52d-7f15-4a42-8465-84eba1bab534" />
 
