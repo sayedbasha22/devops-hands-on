@@ -66,7 +66,7 @@ save it
 Step3 :
 try any errors in yaml usig dry run command 
 
-kubeclt apply --dry-run=client -f nginx-deployment.yaml
+kubectl apply --dry-run=client -f nginx-deployment.yaml
 kubectl apply --dry-run=client -f nginx-service.yaml 
 if success deploy the yaml files 
 kubectl apply -f nginx-deployment.yaml
@@ -79,7 +79,7 @@ kunectl get svc
 
 
 
-<img width="1920" height="1200" alt="Screenshot 2025-08-09 143135" src="https://github.com/user-attachments/assets/ba986318-72bf-41b6-bc30-47909d36fa97" />
-<img width="1920" height="1200" alt="Screenshot 2025-08-09 143450" src="https://github.com/user-attachments/assets/4a152a55-d21b-4a54-be8b-71524aa17bed" />
+<img width="800" height="1200" alt="Screenshot 2025-08-09 143135" src="https://github.com/user-attachments/assets/ba986318-72bf-41b6-bc30-47909d36fa97" />
+<img width="800" height="1200" alt="Screenshot 2025-08-09 143450" src="https://github.com/user-attachments/assets/4a152a55-d21b-4a54-be8b-71524aa17bed" />
 
 
