@@ -46,3 +46,8 @@ Automatically creates or deletes pods to match the desired replica count.
 Usually not used directly in production — Deployments manage ReplicaSets for you.
 
 
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b9dca204-1f25-451f-8988-e146ab3ef2a5" />
+
+
+
