@@ -1,4 +1,6 @@
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/4ad9bfa9-77bb-4837-aed5-66f5fc24c7ab" />**How to Create a Dockerhub account ?**
+
+
+**How to Create a Dockerhub account ?**
 https://hub.docker.com/signup/ 
 click here and you can login via mail / github / 
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d892366e-6e77-44f0-8984-875c35624bcb" />
