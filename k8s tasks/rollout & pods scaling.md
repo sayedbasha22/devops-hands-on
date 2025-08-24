@@ -39,3 +39,5 @@ kubectl get deployment restaurant-deployment
 Autoscale (HPA): 
 kubectl autoscale deployment restaurant-deployment --min=2 --max=10 --cpu-percent=80 
 This means if CPU usage > 80%, Kubernetes adds more Pods (up to 10).
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/e91bc97e-0407-4881-8991-df699847f446" />
+
